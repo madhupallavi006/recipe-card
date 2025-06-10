@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Card</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+ <header>
+  <h1 class="main-title">Recipe Card</h1>
+</header>
+
+  <div class="card">
+    <img src="https://www.fnp.com/images/pr/m/v300/velvety-chocolate-truffle-cakes-half-kg.jpg" class="image" alt="Chocolate Cake" />
+    <div class="content">
+      <div class="title">Chocolate Cake</div>
+      <p><strong>Prep Time:</strong> 30 mins | <strong>Serves:</strong> 4</p>
+      <button class="button" onclick="toggle('choco-ingredients')">Ingredients</button>
+      <button class="button" onclick="toggle('choco-steps')">Steps</button>
+      <div id="choco-ingredients" class="section">
+        <ul>
+          <li>Flour, Sugar, Cocoa, Baking Soda</li>
+          <li>Oil, Water, Vanilla, Vinegar</li>
+        </ul>
+      </div>
+      <div id="choco-steps" class="section">
+        <ol id="choco-step-list">
+         <li>Preheat oven to 350°F (175°C).</li>
+  <li>Mix dry ingredients: flour, sugar, cocoa, baking soda.</li>
+  <li>Mix wet ingredients: oil, water, vanilla, vinegar.</li>
+  <li>Combine wet and dry, pour into pan.</li>
+  <li>Bake 30 minutes, then cool.</li>
+        </ol>
+        <div class="progress-container">
+          <div id="choco-progress" class="progress-bar"></div>
+        </div>
+        <button class="button" onclick="startCooking('choco')">Start Cooking</button>
+        <button class="button" onclick="nextStep('choco')">Next</button>
+      </div>
+    </div>
+  </div>
+
+   <div class="card">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/024/021/183/small/a-bowl-of-biryani-with-a-meat-and-beef-dish-on-it-food-concept-ai-generated-photo.jpg" class="image" alt="Biryani" />
+  <div class="content">
+    <div class="title">Biryani</div>
+    <p><strong>Prep Time:</strong> 1 hr | <strong>Serves:</strong> 6</p>
+    <button class="button" onclick="toggle('biryani-ingredients')">Ingredients</button>
+    <button class="button" onclick="toggle('biryani-steps')">Steps</button>
+    <div id="biryani-ingredients" class="section">
+      <ul>
+        <li>Rice, Meat, Yogurt, Onions</li>
+        <li>Spices, Garlic, Ginger, Oil</li>
+      </ul>
+    </div>
+    <div id="biryani-steps" class="section">
+      <ol id="biryani-step-list">
+      <ol id="briyani-step-list">
+  <li>Soak rice and marinate meat with yogurt, spices, garlic, and ginger.</li>
+  <li>Fry onions in oil until golden and set aside.</li>
+  <li>Cook the marinated meat until tender.</li>
+  <li>Partially cook the rice.</li>
+  <li>Layer meat and rice, top with fried onions, then cook on low heat until done.</li>
+  <li>Serve hot.</li>
+</ol>
+  
+      </ol>
+      <div class="progress-container">
+        <div id="biryani-progress" class="progress-bar"></div>
+      </div>
+      <button class="button" onclick="startCooking('biryani')">Start Cooking</button>
+      <button class="button" onclick="nextStep('biryani')">Next</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://media.istockphoto.com/id/1326143969/photo/bowl-with-vanilla-ice-cream-balls.jpg?s=612x612&w=0&k=20&c=WxEriNEK7yW7F4AWImLQRrpco-R_bdDYEQoyhigu9fc=" class="image" alt="Ice Cream" />
+  <div class="content">
+    <div class="title">Ice Cream</div>
+    <p><strong>Prep Time:</strong> 45 mins | <strong>Serves:</strong> 4</p>
+    <button class="button" onclick="toggle('ice-ingredients')">Ingredients</button>
+    <button class="button" onclick="toggle('ice-steps')">Steps</button>
+    <div id="ice-ingredients" class="section">
+      <ul>
+        <li>Milk, Cream, Sugar, Vanilla Extract</li>
+        <li>Egg Yolks (optional)</li>
+      </ul>
+    </div>
+    <div id="ice-steps" class="section">
+      <ol id="ice-step-list">
+        <ol id="ice-step-list">
+  <li>Mix milk, cream, sugar, vanilla, and egg yolks (if using) until smooth.</li>
+  <li>Heat gently while stirring until slightly thickened.</li>
+  <li>Cool the mixture, then freeze and churn until creamy.</li>
+  <li>Serve or store in freezer.</li>
+</ol>
+
+      </ol>
+      <div class="progress-container">
+        <div id="ice-progress" class="progress-bar"></div>
+      </div>
+      <button class="button" onclick="startCooking('ice')">Start Cooking</button>
+      <button class="button" onclick="nextStep('ice')">Next</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOfFchO76gTgCSXn8SN0D0lJNUgnUNn0A2A&s" class="image" alt="Pizza" />
+  <div class="content">
+    <div class="title">Pizza</div>
+    <p><strong>Prep Time:</strong> 1 hr 15 mins | <strong>Serves:</strong> 4</p>
+    <button class="button" onclick="toggle('pizza-ingredients')">Ingredients</button>
+    <button class="button" onclick="toggle('pizza-steps')">Steps</button>
+    <div id="pizza-ingredients" class="section">
+      <ul>
+        <li>Flour, Yeast, Water, Salt</li>
+        <li>Tomato Sauce, Cheese, Toppings</li>
+      </ul>
+    </div>
+    <div id="pizza-steps" class="section">
+      <ol id="pizza-step-list">
+        <li>Mix flour, yeast, water, and salt to make dough; let it rise.</li>
+  <li>Roll out dough and spread tomato sauce on top.</li>
+  <li>Add cheese and your favorite toppings.</li>
+  <li>Bake at 450°F (230°C) for 12-15 minutes.</li>
+      </ol>
+      <div class="progress-container">
+        <div id="pizza-progress" class="progress-bar"></div>
+      </div>
+      <button class="button" onclick="startCooking('pizza')">Start Cooking</button>
+      <button class="button" onclick="nextStep('pizza')">Next</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://media.istockphoto.com/id/512752948/photo/chocolate-milkshake-with-whipped-cream.jpg?s=612x612&w=0&k=20&c=ngIDW6yk07lR2UDSQqtPyz2vuab8AA_iJlRrJYwNhhk=" class="image" alt="Milkshake" />
+  <div class="content">
+    <div class="title">Milkshake</div>
+    <p><strong>Prep Time:</strong> 10 mins | <strong>Serves:</strong> 2</p>
+    <button class="button" onclick="toggle('shake-ingredients')">Ingredients</button>
+    <button class="button" onclick="toggle('shake-steps')">Steps</button>
+    <div id="shake-ingredients" class="section">
+      <ul>
+        <li>Milk, Ice Cream, Sugar, Flavoring (chocolate, vanilla)</li>
+      </ul>
+    </div>
+    <div id="shake-steps" class="section">
+      <ol id="shake-step-list">
+        <li>Add ingredients to blender</li>
+        <li>Blend until smooth and creamy</li>
+        <li>Pour into glasses</li>
+        <li>Serve chilled</li>
+      </ol>
+      <div class="progress-container">
+        <div id="shake-progress" class="progress-bar"></div>
+      </div>
+      <button class="button" onclick="startCooking('shake')">Start Cooking</button>
+      <button class="button" onclick="nextStep('shake')">Next</button>
+    </div>
+  </div>
+</div>
+
+<div class="print-fixed-bottom">
+  <button class="button" onclick="window.print()">🖨️ Print All Recipes</button>
+</div>
+
+ <script src="script.js" defer></script>
+
+</body>
+</html>

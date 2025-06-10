@@ -1,0 +1,202 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background:linear-gradient(to bottom right, #ffe9e3, #fffaf3, #e0f7fa); ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+header {
+  width: 100%;
+  background-color: #f9f9ff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+ margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+@media print {
+  .print-button,
+  .button,
+  .progress-container,
+  .progress-bar,
+  .main-title {
+    display: none !important;
+  }
+
+  .section {
+    display: block !important;
+  }
+
+  .card {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: auto;           
+    box-shadow: none;      
+    transform: none;
+  }
+
+  img {
+    display: none; 
+     height: auto;
+     max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+  }
+}
+
+
+   .card {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;   
+    padding: 8px;         
+    width: auto;           
+    box-shadow: none;      
+    transform: none; 
+}
+
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+ 
+   font-size: 1.1rem;    
+    margin-bottom: 5px;
+}
+
+.button {
+  background-color: #ff9a8b;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 5px 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+  background-color: #ff6f61;
+  transform: translateY(-2px);
+}
+
+.section {
+  display: none;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.section ul, .section ol {
+  padding-left: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 0%;
+  background-color: #76c7c0;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+.print-fixed-bottom {
+  position: fixed;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+}
+.print-fixed-bottom .button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.bottom-print-button {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.bottom-print-button button {
+  background-color: #ffa07a;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-print-button button:hover {
+  background-color: #ff6347;
+}
+
+
+@media print {
+  .print-fixed-button {
+    display: none;
+  }
+}
+
+
